@@ -1,4 +1,5 @@
 ﻿using System;
+using SQLiteNetExtensions.Attributes;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,5 +19,8 @@ namespace Vieru_Marina_Lab7.Models
 
         public string Description { get; set; }
         public DateTime Date { get; set; }
+
+        [ForeignKey(typeof(Shop))]
+        public int ShopID { get; set; }
     }
 }

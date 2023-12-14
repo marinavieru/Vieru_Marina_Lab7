@@ -13,12 +13,12 @@ namespace Vieru_Marina_Lab7
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                })
 
-#if DEBUG
-            builder.Logging.AddDebug();
-#endif
-
+.ConfigureEssentials(essentials =>
+ {
+     essentials.UseMapServiceToken("FD568weS7n0iVa69IMrZ~DWukQbG5KTvVh1cN2WBwTQ~AmANpNGl_eWpUn5vqc04C-XRhwZSD-Iv4CxB_qPASlt8DKcmCv1AWgU1BTASdR7z");
+ });
             return builder.Build();
         }
     }
